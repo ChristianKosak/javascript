@@ -6,7 +6,7 @@ const modalContainer = document.getElementById("modal-container");
 
 let carrito = [];
 
-productos.forEach((product)=>{
+productos.forEach((product)=> {
     let content = document.createElement("div");
     content.className = "card";
     content.innerHTML = `
@@ -37,7 +37,12 @@ productos.forEach((product)=>{
 
 });
 
+
+
+
 verCarrito.addEventListener("click",() => {
+    modalContainer.innerHTML = "";
+    modalContainer.style.display = "flex";
     const modalHeader = document.createElement("div");
     modalHeader.className = "modal-header";
     modalHeader.innerHTML = `
@@ -48,6 +53,10 @@ verCarrito.addEventListener("click",() => {
     const modalButton = document.createElement("h1");
     modalButton.innerText = "x";
     modalButton.className = "modal-header-button";
+
+    modalButton.addEventListener("click", () => {
+        modalContainer.style.display = "none";
+    });
 
     modalHeader.append(modalButton);
 
@@ -68,6 +77,9 @@ verCarrito.addEventListener("click",() => {
     const totalBuying = document.createElement("div");
     totalBuying.className = "total-content";
     totalBuying.innerHTML = `Total a Pagar: ${total} $`;
-    
+    modalContainer.append(totalBuying);
+
 });
+
+
 
