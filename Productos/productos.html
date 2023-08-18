@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Primera pre-entrega</title>
+
+  <link rel="stylesheet" href="../Productos/style.css">
   <!-- Bootstrap 5 CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
   
@@ -51,6 +53,12 @@
       </div>
     </div>
 
+    
+    <a class="navbar-brand ms-auto" href="#">
+      <h1 class="ver-carrito" id="verCarrito">🛒</h1>
+
+      <!-- Modal -->
+   <div id="modal-container" class="modal-container"></div>
     
 
     </div>
@@ -104,232 +112,10 @@
   </div>
 
 
-  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="cartModalLabel">Carrito de Compras</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body" id="cartItems">
-         
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary" id="checkoutBtn">Pagar</button>
-        </div>
-      </div>
-    </div>
-  </div>
+  
+<!-- Shop -->
 
-  <div class="container mt-4">
-
-    <div class="container mt-4">
-        <div class="row">
-          <div class="col">
-            <input id="searchInput" class="form-control" type="text" placeholder="Buscar productos">
-            <ul id="resultsList" class="results-list"></ul>
-          </div>
-        </div>
-      </div>
-
-     
-
-
-      <div class="container mt-4">
-        <div class="row" id="productRow">
-<div class="col-md-4 mb-4">
-    <div class="card">
-      <img src="../Imagenes/Pantalon1.jpeg" class="card-img-top" alt="Pantalón 1">
-      <div class="card-body">
-        <h5 class="card-title">Pantalón</h5>
-        <p class="card-text">$20.000</p>
-        <button class="btn btn-primary">Comprar</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4 mb-4">
-    <div class="card">
-      <img src="../Imagenes/pantalon2.jpeg" class="card-img-top" alt="Pantalón 1">
-      <div class="card-body">
-        <h5 class="card-title">Pantalón</h5>
-        <p class="card-text">$22.000</p>
-        <button class="btn btn-primary">Comprar</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4 mb-4">
-    <div class="card">
-      <img src="../Imagenes/pantalon3.jpeg" class="card-img-top" alt="Pantalón 1">
-      <div class="card-body">
-        <h5 class="card-title">Pantalón</h5>
-        <p class="card-text">$21.000</p>
-        <button class="btn btn-primary">Comprar</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4 mb-4">
-    <div class="card">
-      <img src="../Imagenes/pantalon4.jpeg" class="card-img-top" alt="Pantalón 1">
-      <div class="card-body">
-        <h5 class="card-title">Pantalón</h5>
-        <p class="card-text">$23.000</p>
-        <button class="btn btn-primary">Comprar</button>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="col-md-4 mb-4">
-    <div class="card">
-      <img src="../Imagenes/malla1.jpeg" class="card-img-top" alt="Pantalón 1">
-      <div class="card-body">
-        <h5 class="card-title">Malla</h5>
-        <p class="card-text">$15.000</p>
-        <button class="btn btn-primary">Comprar</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4 mb-4">
-    <div class="card">
-      <img src="../Imagenes/malla2.jpeg" class="card-img-top" alt="Pantalón 1">
-      <div class="card-body">
-        <h5 class="card-title">Malla</h5>
-        <p class="card-text">$16.000</p>
-        <button class="btn btn-primary">Comprar</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4 mb-4">
-    <div class="card">
-      <img src="../Imagenes/malla3.jpeg" class="card-img-top" alt="Pantalón 1">
-      <div class="card-body">
-        <h5 class="card-title">Malla</h5>
-        <p class="card-text">$17.500</p>
-        <button class="btn btn-primary">Comprar</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4 mb-4">
-    <div class="card">
-      <img src="../Imagenes/zapatillas1.jpeg" class="card-img-top" alt="Pantalón 1">
-      <div class="card-body">
-        <h5 class="card-title">Zapatilla</h5>
-        <p class="card-text">$30.000</p>
-        <button class="btn btn-primary">Comprar</button>
-      </div>
-    </div>
-  </div>
- 
-
-  <div class="col-md-4 mb-4">
-    <div class="card">
-      <img src="../Imagenes/zapatillas2.jpeg" class="card-img-top" alt="Pantalón 1">
-      <div class="card-body">
-        <h5 class="card-title">Zapatilla</h5>
-        <p class="card-text">$35.000</p>
-        <button class="btn btn-primary">Comprar</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4 mb-4">
-    <div class="card">
-      <img src="../Imagenes/zapatillas3.jpeg" class="card-img-top" alt="Pantalón 1">
-      <div class="card-body">
-        <h5 class="card-title">Zapatilla</h5>
-        <p class="card-text">$27.500</p>
-        <button class="btn btn-primary">Comprar</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4 mb-4">
-    <div class="card">
-      <img src="../Imagenes/medias1.jpeg" class="card-img-top" alt="Pantalón 1">
-      <div class="card-body">
-        <h5 class="card-title">Medias</h5>
-        <p class="card-text">$5.000</p>
-        <button class="btn btn-primary">Comprar</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4 mb-4">
-    <div class="card">
-      <img src="../Imagenes/medias2.jpeg" class="card-img-top" alt="Pantalón 1">
-      <div class="card-body">
-        <h5 class="card-title">Medias</h5>
-        <p class="card-text">$7.500</p>
-        <button class="btn btn-primary">Comprar</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4 mb-4">
-    <div class="card">
-      <img src="../Imagenes/medias3.jpeg" class="card-img-top" alt="Pantalón 1">
-      <div class="card-body">
-        <h5 class="card-title">Medias</h5>
-        <p class="card-text">$6.000</p>
-        <button class="btn btn-primary">Comprar</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4 mb-4">
-    <div class="card">
-      <img src="../Imagenes/remera1.jpeg" class="card-img-top" alt="Pantalón 1">
-      <div class="card-body">
-        <h5 class="card-title">Remera</h5>
-        <p class="card-text">$10.000</p>
-        <button class="btn btn-primary">Comprar</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4 mb-4">
-    <div class="card">
-      <img src="../Imagenes/remera2.jpeg" class="card-img-top" alt="Pantalón 1">
-      <div class="card-body">
-        <h5 class="card-title">Remera</h5>
-        <p class="card-text">$12.000</p>
-        <button class="btn btn-primary">Comprar</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4 mb-4">
-    <div class="card">
-      <img src="../Imagenes/remera3.jpeg" class="card-img-top" alt="Pantalón 1">
-      <div class="card-body">
-        <h5 class="card-title">Remera</h5>
-        <p class="card-text">$11.500</p>
-        <button class="btn btn-primary">Comprar</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4 mb-4">
-    <div class="card">
-      <img src="../Imagenes/remera4.jpeg" class="card-img-top" alt="Pantalón 1">
-      <div class="card-body">
-        <h5 class="card-title">Remera</h5>
-        <p class="card-text">$11.000</p>
-        <button class="btn btn-primary">Comprar</button>
-      </div>
-    </div>
-  </div>
-
-
-</div>
-</div>
+<div id="shopContent" class="shop-content"></div>
 
 
 
@@ -338,13 +124,13 @@
 
 
 
+  
+   <!-- JavaScript -->
 
-  <!-- Bootstrap 5 JS (Popper.js is required) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js"></script>
-  <script src="../main.js"></script> <!-- Tu script JavaScript -->
+  
+   <script src="../products.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="../carrito.js"></script>
 
   
 
