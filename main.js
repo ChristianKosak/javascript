@@ -15,11 +15,12 @@ let productos = [];
   return productos.find(producto => producto.nombre === nombre);
 }*/
 
-// Función para mostrar el resultado utilizando SweetAlert
+//  SweetAlert
 function mostrarResultado(costoTotal, productoEncontrado) {
   const mensaje = "El costo total de los productos seleccionados es: " + costoTotal.toFixed(2);
   
-  // Mostrar el producto encontrado (si existe)
+  
+
   if (productoEncontrado) {
     Swal.fire({
       icon: 'success',
@@ -72,10 +73,10 @@ function mostrarResultado(costoTotal, productoEncontrado) {
   const buscarProductoNombre = prompt("Ingrese el nombre del producto a buscar:");
 
   try {
-    const response = await fetch('ruta-a-tu-archivo.json'); // Cambia 'ruta-a-tu-archivo.json' por la ubicación de tu archivo JSON
+    const response = await fetch('ruta-a-tu-archivo.json'); 
     const data = await response.json();
     
-    // Carga los datos desde el JSON en el array 'productos'
+    
     productos = data.productos;
 
     /*const productoEncontrado = buscarProducto(buscarProductoNombre); // Busca el producto en el array
@@ -85,14 +86,14 @@ function mostrarResultado(costoTotal, productoEncontrado) {
     /*mostrarResultado(costoTotal, null);*/ // Mostrar el resultado sin el producto encontrado
   }
 
-// Agregar los productos iniciales (puedes cargarlos desde el JSON también)
+// Agregar los productos iniciales
 /*agregarProducto("Remera", 10000);
 agregarProducto("Pantalón", 20000);
 agregarProducto("Malla", 15000);
 agregarProducto("Zapatilla", 35000);
 agregarProducto("Medias", 5000);*/
 
-// Llama a la función de simulación cuando la página esté cargada
+
 document.addEventListener("DOMContentLoaded", simuladorCostos);
 
 
@@ -109,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const username = loginForm.username.value;
     const password = loginForm.password.value;
 
-    // Verificar credenciales (ejemplo: usuarios predeterminados)
+    
     if (username === "usuario1" && password === "contrasena1") {
       Swal.fire({
         icon: 'success',
