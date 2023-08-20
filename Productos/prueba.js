@@ -4,7 +4,7 @@ const verCarrito = document.getElementById("verCarrito");
 const modalContainer = document.getElementById("modal-container");
 const cantidadCarrito = document.getElementById("cantidadCarrito");
 
-let carrito = [];
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 const productos = [
     { 
@@ -72,6 +72,8 @@ const renderProducts = (searchTerm) => {
 
             actualizarCantidadCarrito();
             console.log(carrito);
+            saveLocal();
+
         });
     });
 };
@@ -124,3 +126,13 @@ verCarrito.addEventListener("click",() => {
     modalContainer.append(totalBuying);
 
 });
+
+
+const saveLocal = () => {
+
+localStorage.setItem("carrito", JSON.stringify(carrito));
+
+};
+
+JSON.parse(localStorage.getItem("carrito"));
+
