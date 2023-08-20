@@ -125,6 +125,8 @@ verCarrito.addEventListener("click",() => {
     totalBuying.innerHTML = `Total a Pagar: ${total} $`;
     modalContainer.append(totalBuying);
 
+    
+
 });
 
 
